@@ -1,0 +1,166 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body
+{
+	position: relative;
+	height: 100vh;
+	color: #fff;
+	font-weight: 400;
+	background: #161623;
+}
+body::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #24ff72, #2196f3);
+	filter: blur(25px);
+	clip-path: circle(30% at 85% 80%);
+}
+body::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #ffec61, #f321d7);
+	filter: blur(25px);
+	clip-path: circle(20% at 25% 10%);
+}
+.container
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	z-index: 1;
+}
+.container h1
+{
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 700;
+	text-align: left;
+	letter-spacing: 2px;
+	margin: 40px 0 20px 0;
+}
+.container .add
+{
+	width: 900px;
+	margin: 20px;
+}
+.container .add a
+{
+	text-decoration: none;
+	text-align: left;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 35px;
+	border: 1px solid #fff;
+	font-weight: 600;
+	transition: 0.4s ease-in-out;
+	cursor: pointer;
+	margin-right: 10px;
+	background: rgba(0, 0, 0, 0.3);
+}
+.container .add a:hover
+{
+	color: #000;
+	background: #fff;
+}
+.container .card {
+	position: relative;
+	box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	padding: 25px;
+	max-height: 400px;
+	min-width: 950px;
+	background: rgba(0, 0, 0, 0.3);
+	overflow: scroll;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+}
+.container .card table
+{
+	width: 100%;
+	border-collapse: collapse;
+}
+.container .card table #header
+{
+	padding: 30px;
+	box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.2),
+			-1px -1px 8px rgba(255, 255, 255, 0.2);
+	text-align: center
+}
+.container .card table tr
+{
+	padding: 40px 0;
+	border-radius: 15px;
+	transition: all 0.2s ease-in;
+}
+.container .card table th
+{
+	padding: 15px 20px;
+	text-align: left;
+	word-wrap: none;
+	cursor: default;
+}
+.container .card table td
+{
+	padding: 15px;
+	text-align: left;
+	word-wrap: normal;
+	cursor: default;
+} 
+.container .card table tr:hover 
+{
+	transform: scale(1.02);
+	box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.2),
+			-1px -1px 8px rgba(255, 255, 255, 0.2);
+}
+.container .card table tr a
+{
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 35px;
+	font-weight: 600;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+.container .card table tr a:hover 
+{
+	background: #fff;
+	color: #000;
+}
+.container .card table tr #delete:hover
+{
+	background: #ff0000;
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+	background: transparent;
+	overflow: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #fff;
+	border-radius: 0.7rem;
+}
